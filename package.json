@@ -1,0 +1,23 @@
+{
+  "name": "game-filter",
+  "version": "1.0.0",
+  "description": "A site where users can find the latest news exclusively on their favourite games ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Boateng",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "express-ejs-layouts": "^2.2.0",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0"
+  }
+}
