@@ -10,4 +10,12 @@ function MainRouter ($stateProvider, $urlRouterProvider){
 	      url: '/',
 	      templateUrl: '/states/index.html',
 	    })
+	    .state('signup', {
+	      url: '/signup',
+	      templateUrl: '/states/signup.html',
+	    })
+	    .state('login', {
+	      url: '/login',
+	      templateUrl: '/states/login.html',
+	    })
 }
