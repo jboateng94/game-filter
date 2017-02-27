@@ -1,8 +1,8 @@
 {
   "name": "game-filter",
   "version": "1.0.0",
-  "description": "A site where users can find the latest news exclusively on their favourite games ",
-  "main": "app.js",
+  "description": "A site where users can find the latest news on their favourite games ",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
