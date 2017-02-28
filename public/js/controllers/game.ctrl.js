@@ -1,5 +1,5 @@
 angular
-  .module('myApp')
+  .module('gameFilter')
   .controller('gameController', gameController)
 
 function gameController() {

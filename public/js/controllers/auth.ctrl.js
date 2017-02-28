@@ -3,7 +3,7 @@
 angular.module('gameFilter')
 	.controller('authController', authController)
 
-function authController(Auth, $state) {
+function authController(Auth, User, $state) {
 	var self = this;
 
 	self.createUser = function() {
@@ -17,8 +17,8 @@ function authController(Auth, $state) {
 					self.err = err.err;
 					resetCredentials();
 				})
-				
-				$state.go('login')
+
+				$state.go('home')
 			}).catch(function(error) {
 				self.error = error;
 			})

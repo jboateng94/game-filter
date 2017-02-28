@@ -1,5 +1,5 @@
 angular
-	.module('gameFilter', ['ui.router','firebase','ngResource']) // 
+	.module('gameFilter', ['ui.router','firebase','ngResource'])
 	.config(MainRouter)
 	.run(AuthCatcher)
 
