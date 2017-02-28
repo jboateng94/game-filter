@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('gameFilter')
 	.controller('authController', authController)
 
 function authController(Auth, $state) {
