@@ -10,7 +10,7 @@ function AuthCatcher($rootScope, $state) {
 }
 
 function MainRouter ($stateProvider, $urlRouterProvider){
-	$urlRouterProvider.otherwise('/login');
+	$urlRouterProvider.otherwise('/');
 
 	var authRequired = {
 		currentAuth: function(Auth){
@@ -35,5 +35,9 @@ function MainRouter ($stateProvider, $urlRouterProvider){
 	    .state('authRequired', {
 	      url: '/auth-required',
 	      templateUrl: '/states/authRequired.html'
+	    })
+	    .state('users', {
+	      url: '/users',
+	      templateUrl: '/states/users.html'
 	    })
 }
