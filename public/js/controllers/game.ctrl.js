@@ -4,4 +4,5 @@ angular
 
 function gameController() {
 	var self = this;
+	self.title = 'Wap';
 }
