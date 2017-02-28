@@ -1,1 +1,23 @@
 wubalubadubdub
+
+<section ng-if="!auth.user">
+	<div>
+		<label for="email">Email: </label>
+		<input type="email" name="email" ng-model="auth.email">
+	</div>
+
+	<div>
+		<label for="password">Password: </label>
+		<input type="password" name="password" ng-model="auth.password">
+	</div>
+
+	<button ng-click="auth.logIn()">Log in</button>
+
+	<p ng-if="auth.error">
+		Error: <strong>{{ auth.error }}</strong>
+	</p>
+</section>
+
+<section ng-if="auth.user">
+	<p>But you're logged in...</p>
+</section>
