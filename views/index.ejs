@@ -29,8 +29,27 @@
 </head>
 
 <body ng-controller='authController as auth'>
-	<div ng-if="auth.user">
-      <strong>Welcome {{auth.user.email}}</strong>
+	<nav>
+	  <div class="nav-wrapper" ng-if="auth.user">
+	  	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
+	    <h2 class="brand-logo center">Welcome {{auth.user.email}}!</h2>
+	    <ul id="nav-mobile" class="left hide-on-med-and-down">
+	      <li><a href="#" ng-click="auth.signOut()">Log out</a></li>
+	      <li><a href="#" ui-sref='home'>Home</a></li>
+	    </ul>
+	  </div>
+	  <div class="nav-wrapper" ng-if="!auth.user">
+	  	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
+	    <h2 class="brand-logo center">Welcome new user!</h2>
+	    <ul id="nav-mobile" class="left hide-on-med-and-down">
+	      <li><a href="#" ui-sref='login'>Log in</a></li>
+	      <li><a href="#" ui-sref='signup'>Signup</a></li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<!-- <div ng-if="auth.user">
+      <h2 class="brand-logo center">Welcome {{auth.user.email}}</h2>
       <br>
       <a href="#" ng-click="auth.signOut()">Log out</a>
       <a href="#" ui-sref='home'>Home</a>
@@ -43,7 +62,7 @@
       <a href="#" ui-sref='signup'>Signup</a>
 
     </div>
-
+ -->
 	<section ui-view> 
     <!-- views get rendered here  -->
   	</section>

@@ -1,6 +1,7 @@
 
 
-angular.module('gameFilter')
+angular
+	.module('gameFilter')
 	.controller('authController', authController)
 
 function authController(Auth, User, $state) {
@@ -32,7 +33,7 @@ function authController(Auth, User, $state) {
 	self.logIn = function () {
 		Auth.$signInWithEmailAndPassword(self.email, self.password)
 			.then(function (user) {
-				$state.go('home');
+				$state.go('users');
 				resetCredentials();
 			}).catch(function(error) {
 				self.error = error;
