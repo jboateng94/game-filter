@@ -1,5 +1,5 @@
 angular
-	.module('gameFilter', ['ui.router','firebase']) // 
+	.module('gameFilter', ['ui.router','firebase','ngResource']) // 
 	.config(MainRouter)
 	.run(AuthCatcher)
 
@@ -10,7 +10,7 @@ function AuthCatcher($rootScope, $state) {
 }
 
 function MainRouter ($stateProvider, $urlRouterProvider){
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/login');
 
 	var authRequired = {
 		currentAuth: function(Auth){

@@ -1,3 +1,5 @@
+
+
 angular.module('gameFilter')
 	.controller('authController', authController)
 
@@ -8,7 +10,14 @@ function authController(Auth, $state) {
 		console.log('create user');
 		Auth.$createUserWithEmailAndPassword(self.email, self.password)
 			.then(function (user) {
-				resetCredentials();
+
+				User.create({
+					uid: user.uid
+				}, function(user, err) {
+					self.err = err.err;
+					resetCredentials();
+				})
+				
 				$state.go('login')
 			}).catch(function(error) {
 				self.error = error;
@@ -17,13 +26,13 @@ function authController(Auth, $state) {
 
 	self.signOut = function () {
 		Auth.$signOut();
-		$state.go('home');
+		$state.go('login');
 	}
 
 	self.logIn = function () {
 		Auth.$signInWithEmailAndPassword(self.email, self.password)
 			.then(function (user) {
-				$state.go('secret');
+				$state.go('home');
 				resetCredentials();
 			}).catch(function(error) {
 				self.error = error;
