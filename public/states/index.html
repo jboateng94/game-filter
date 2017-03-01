@@ -16,4 +16,9 @@
 			</div>
 		</div>
 	</section>
+	<section class="container">
+		<ul>
+			<li ng-repeat="game in gameCtrl.data track by $index">{{ game.name }} </li>
+		</ul>
+	</section>
 </section>
