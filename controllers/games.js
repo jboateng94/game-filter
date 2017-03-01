@@ -1,5 +1,6 @@
-function indexGame(req , res) {
+var request = require('request');
 
+function indexGame(req , res) {
   res.render("../views/index.ejs",{
     title: "Home",
   });
