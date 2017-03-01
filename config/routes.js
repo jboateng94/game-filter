@@ -6,7 +6,7 @@ router
 	.get('/' , gamesController.index);
 
 router
-	.get('/search', gamesController.search)
+	.get('/search/:searchTerm', gamesController.search)
 
 
 

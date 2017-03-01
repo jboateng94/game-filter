@@ -11,6 +11,7 @@ mongoose.connect('mongodb://localhost/game');
 app.use(express.static('public'));
 
 // body parser
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
 

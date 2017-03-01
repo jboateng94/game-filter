@@ -8,11 +8,18 @@ function gameController(Game) {
 	self.searchTerm = ''
 
 	self.search = function () {
-
-		console.log(self.searchTerm)
-		Game.search(self.searchTerm);
-		// create function to make http request 
 		// put self.searchTerm in body of request
 
+		console.log(self.searchTerm);
+		Game.search(self.searchTerm)
+			.then(function successCallback(response) {
+		    // this callback will be called asynchronously
+		    // when the response is available
+		    console.log('it went through:'+JSON.parse(response))
+		  }, function errorCallback(response) {
+		    // called asynchronously if an error occurs
+		    // or server returns response with an error status.
+		    console.log('maybe not...', response);
+		  });;;
 	}
 }
