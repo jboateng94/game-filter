@@ -12,7 +12,7 @@
 				<input type="password" name="password" ng-model="auth.password">
 			</div>
 
-			<button ng-click="auth.createUser()">Sign up</button>
+			<button class="btn waves-effect waves-light" ng-click="auth.createUser()">Sign up</button>
 
 			<p ng-if="auth.error">
 				Error: <strong>{{ auth.error }}</strong>
