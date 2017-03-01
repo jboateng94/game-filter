@@ -16,7 +16,7 @@ function search (req, res) {
 		function (error, response, body) {
 	  if (!error && response.statusCode == 200) {
 	  	// console.log('success')
-	    // console.log('IT WORKED: '+body) // Show the JSON of the search query. 
+	    console.log('IT WORKED: '+body) // Show the JSON of the search query. 
 		res.json(body)
 		}else{
 	  	// console.log('error')

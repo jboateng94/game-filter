@@ -3,7 +3,7 @@ angular
     .factory('Game', gameFactory)
 
 // create function to make http request
-function gameFactory($resource, $http) {
+function gameFactory($http) {
    return {
    	search: function (searchTerm) {
    		return $http.get('/search/' + searchTerm)
