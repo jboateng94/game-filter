@@ -16,7 +16,7 @@
 				<input type="password" name="password" ng-model="auth.password">
 			</div>
 
-			<button ng-click="auth.logIn()">Log in</button>
+			<a class="waves-effect waves-light btn" ng-click="auth.logIn()">Log in!</a>
 
 			<p ng-if="auth.error">
 				Error: <strong>{{ auth.error }}</strong>
