@@ -10,8 +10,6 @@ function gameController(Game, $state, $stateParams) {
 
 	self.search = function () {
 		// put self.searchTerm in body of request
-
-		console.log(self.searchTerm);
 		Game.search(self.searchTerm)
 		  .then(function successCallback(response) {
 			  // this callback will be called asynchronously
@@ -32,8 +30,7 @@ function gameController(Game, $state, $stateParams) {
 		console.log($stateParams.name);
 		Game.show($stateParams.name)
 		  .then(function(response) {
-		  	console.log('yhhhhhh');
-		  	console.log(response)
+		  	
 			  // this callback will be called asynchronously
 		      // when the response is available
 			  self.show = JSON.parse(response.data).results[0]
