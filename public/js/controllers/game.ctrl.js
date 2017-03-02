@@ -17,9 +17,9 @@ function gameController(Game) {
 		      // when the response is available
 			
 			  self.data = JSON.parse(response.data).results
-			  // for (var i = 0; i < self.data.results.length; i++) {
-			  // 	console.log(self.data.results[i]);
-			  // }
+			  for (var i = 0; i < self.data.length; i++) {
+			  	console.log(self.data[i]);
+			  }
 			}, function errorCallback(response) {
 		    // called asynchronously if an error occurs
 		    // or server returns response with an error status.
