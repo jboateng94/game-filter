@@ -8,5 +8,7 @@ body{
 }
 
 .card{
-	height: 300px;
+	display: inline;
 }
+
+

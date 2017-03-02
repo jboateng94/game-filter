@@ -7,6 +7,7 @@ router
 
 router
 	.get('/search/:searchTerm', gamesController.search)
+	.get('/game/:name', gamesController.show)
 
 
 

@@ -40,4 +40,8 @@ function MainRouter ($stateProvider, $urlRouterProvider){
 	      url: '/users',
 	      templateUrl: '/states/users.html'
 	    })
+	    .state('game', {
+	      url: '/game/:name',
+	      templateUrl: '/states/game.html'
+	    })
 }

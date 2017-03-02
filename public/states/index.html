@@ -1,6 +1,9 @@
 <section ng-controller="gameController as gameCtrl">
+	
 	<h4>Type in the name of any game</h4>
+	
 	<section class="container">
+		
 		<div class="row">
 			<div>
 				<nav>
@@ -15,18 +18,19 @@
 			    </nav>
 			</div>
 		</div>
+
 	</section>
+
 	<section class="container">
 
 		<div class="row">
           <div class="col s12 m4" ng-repeat="game in gameCtrl.data track by $index">
             <div class="card" >
               <div class="card-image" >
-                <img src="{{ game.image.medium_url }}">
-                <!-- <span class="card-title">Card Title</span> -->
+                <img src="{{ game.image.medium_url }}" alt="Cover art for {{game.name}}">
               </div>
               <div class="card-action">
-                <a href="#">{{ game.name }}</a>
+                <a href="#" ui-sref = "game({name: game.name})" >{{ game.name }}</a>
               </div>
             </div>
           </div>
