@@ -1,4 +1,6 @@
 <section ng-controller="gameController as game">
-	
+	<div ng-init = "game.show()"></div>
+	<h1>{{game.show.name}}</h1>
+	<img src="{{game.show.image.medium_url}}" alt="Cover art for {{game.show.name}}">
 	
 </section>
