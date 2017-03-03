@@ -16,7 +16,8 @@
     "method-override": "^2.3.7",
     "mongoose": "^4.8.5",
     "request": "^2.79.0",
-    "steam-market-pricing": "^1.0.4"
+    "steam-market-pricing": "^1.0.4",
+    "steam-store": "^0.4.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",

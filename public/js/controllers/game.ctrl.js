@@ -33,12 +33,10 @@ function gameController(Game, $state, $stateParams) {
 		Game.show($stateParams.name)
 		  .then(function(response) {
 		  	
-			  // this callback will be called asynchronously
-		      // when the response is available
-			  self.show = JSON.parse(response.data).results[0]
-			  $state.go('game');
-			  
-
-			}) 
+			// this callback will be called asynchronously
+		    // when the response is available
+			self.show = JSON.parse(response.data).results[0]
+			$state.go('game');
+		}) 
 	}
 }
