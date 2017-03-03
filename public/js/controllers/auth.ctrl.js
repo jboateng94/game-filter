@@ -38,7 +38,7 @@ function authController(Auth, User, $state) {
 				resetCredentials();
 			}).catch(function(error) {
 				self.error = error;
-				
+				resetCredentials();
 			})
 	}
 
