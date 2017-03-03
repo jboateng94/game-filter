@@ -14,9 +14,10 @@ function authController(Auth, User, $state) {
 
 				User.create({
 					uid: user.uid
-				}, function(user, err) {
-					self.err = err.err;
+				}).then(function(user) {
 					resetCredentials();
+				}).catch(function (err) {
+					self.err = err.err;
 				})
 
 				$state.go('home')
@@ -37,6 +38,7 @@ function authController(Auth, User, $state) {
 				resetCredentials();
 			}).catch(function(error) {
 				self.error = error;
+				
 			})
 	}
 

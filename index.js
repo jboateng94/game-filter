@@ -3,9 +3,15 @@ var app = express();
 var routes = require('./config/routes');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var ejs = require('ejs');
 
 // connect to the database
-mongoose.connect('mongodb://localhost/game');
+mongoose.connect('mongodb://localhost/game', function(err, db) {
+	console.log(db);
+  	if(!err) {
+    	console.log("We are connected");
+  	}
+});
 
 // used to access external files
 app.use(express.static('public'));

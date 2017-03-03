@@ -3,6 +3,11 @@ var req_options = {
 	headers: {'user-agent': 'Mozilla/5.0'}
 }
 
+var Ebay = require('ebay')
+
+var ebay = new Ebay({
+  app_id: process.env.EBAPI
+})
 
 
 function indexGame(req , res) {
@@ -27,9 +32,7 @@ function search (req, res) {
 }
 
 function showGame (req, res) {
-	// var name = "Sid Meier's Civilization Revolution"
 	var name = req.params.name
-	console.log(name);
 	// use 'request' module to query API, reply with an error or any games that are found.
 	request('http://www.giantbomb.com/api/search/?api_key='+process.env.GBAPIK+'&format=json&query="'+name+'"&resources=game', 
 		req_options,
@@ -46,6 +49,14 @@ function showGame (req, res) {
 			//     	res.status(500).send()
 			//     }
 			// });
+			var params = {
+			  'OPERATION-NAME': 'findItemsByKeywords', 'keywords': name
+			}
+			ebay.get('finding', params, function (err, data) {
+			  if(err) throw err
+
+			  console.log(data)
+			})
 
 		  }else{
 		  	res.status(500).json(error)

@@ -37,7 +37,7 @@ function MainRouter ($stateProvider, $urlRouterProvider){
 	      templateUrl: '/states/authRequired.html'
 	    })
 	    .state('users', {
-	      url: '/users',
+	      url: '/users/:id',
 	      templateUrl: '/states/users.html'
 	    })
 	    .state('game', {

@@ -1,11 +1,11 @@
 <section ng-controller="gameController as game">
 	<div ng-init = "game.show()"></div>
-	<h1>{{game.show.name}}</h1>
+	<h1>{{game.game.name}}</h1>
 	<section class='ratings'>
-		<h4 ng-repeat="rating in game.show.original_game_rating">{{rating.name}}</h4>
+		<h4 ng-repeat="rating in game.game.original_game_rating">{{rating.name}}</h4>
 	</section>
-	<img src="{{game.show.image.small_url}}" alt="Cover art for {{game.show.name}}">
-	<h5> Original Release date: {{game.show.original_release_date}}</h5>
-	<p nge></p>
+	<img src="{{game.game.image.small_url}}" alt="Cover art for {{game.game.name}}">
+	<h5> Original Release date: {{game.game.original_release_date}}</h5>
+	<button ng-click="game.favourite()" >LIKE</button>
 	
 </section>
