@@ -16,7 +16,17 @@ body{
 	padding: 20px;
 }
 
-i{
+.app-logo i{
 	padding-left: 20px;
+	-webkit-transform:rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.app-logo h4{
+	font-family: 'Londrina Outline', cursive;
 }
 

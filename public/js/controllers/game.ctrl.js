@@ -2,6 +2,7 @@ angular
   .module('gameFilter')
   .controller('gameController', gameController)
 
+
 function gameController(Game, $state, $stateParams) {
 	var self = this;
 	self.searchTerm = '';
@@ -16,6 +17,7 @@ function gameController(Game, $state, $stateParams) {
 		      // when the response is available
 			
 			  self.data = JSON.parse(response.data).results
+			  
 			 
 			}, function errorCallback(response) {
 		    // called asynchronously if an error occurs
