@@ -34,8 +34,8 @@ function authController(Auth, User, $state) {
 	self.logIn = function () {
 		Auth.$signInWithEmailAndPassword(self.email, self.password)
 			.then(function (user) {
-				$state.go('home');
 				resetCredentials();
+				$state.go('home');
 			}).catch(function(error) {
 				self.error = error;
 				resetCredentials();

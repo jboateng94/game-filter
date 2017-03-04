@@ -9,12 +9,17 @@ router
 router.route('/users')
 	.post(userController.create)
 
+router.route('/users/:id')
+	.get(userController.games)
+
 router.route('/users/like/:id')
 	.patch(userController.like)
 
 router
 	.get('/search/:searchTerm', gamesController.search)
 	.get('/game/:name', gamesController.show)
+
+
 
 
 

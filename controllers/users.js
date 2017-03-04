@@ -26,7 +26,19 @@ function like (req, res) {
 	})
 }
 
+function games(req,res) {
+	User.findOne({uid: req.params.id}, function (err, user) {
+		if (err) {
+			console.log(err)
+			return res.status(500).json(err)
+		}
+		console.log(user.favourites)
+		res.json(user.favourites)
+	})
+}
+
 module.exports = {
 	create: create,
-	like: like
+	like: like,
+	games: games
 }

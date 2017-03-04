@@ -1,20 +1,37 @@
-<section ng-controller="userController as user">
-	<section ng-controller="gameController as game" class="container">
-		<h3>Your games list</h3>
-		user's games here!
+<!-- <section ng-controller="userController as user" > -->
+<section ng-controller="gameController as game" ng-init="game.getGames()" class="container">
+	<h3>Your games list</h3>
+	user's games here!
 
-		<div class="row">
-          <div class="col s12 m4" ng-repeat="fav in gameCtrl.data track by $index">
-            <div class="card" >
-              <div class="card-image" >
-                <img src="{{ game.image.medium_url }}" alt="Cover art for {{game.name}}">
-              </div>
-              <div class="card-action">
-                <a href="#" ui-sref = "game({name: game.name})" >{{ game.name }}</a>
-              </div>
+  <!-- <p ng-repeat="fav in game.games">{{fav}}</p> -->
+
+	<!-- <div class="row">
+        <div class="col s12 m4" ng-repeat="fav in gameCtrl.data track by $index">
+          <div class="card" >
+            <div class="card-image" >
+              <img src="{{ game.image.medium_url }}" alt="Cover art for {{game.name}}">
+            </div>
+            <div class="card-action">
+              <a href="#" ui-sref = "game({name: game.name})" >{{ game.name }}</a>
             </div>
           </div>
         </div>
-        
-	</section>
+      </div> -->
+
+      <div class="row">
+        <div class="col s12 m4" ng-repeat="fav in game.games track by $index">
+          <div class="card" >
+            <div class="card-image" >
+              <img src="{{ fav.image.medium_url }}" alt="Cover art for {{fav.name}}">
+            </div>
+            <div class="card-action">
+              <p>{{ fav.name }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 </section>
+<!-- </section> -->

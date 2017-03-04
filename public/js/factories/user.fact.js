@@ -10,6 +10,9 @@ function userFactory($http) {
     	},
     	like: function (id, name) {
     		return $http.patch('/users/like/' + id, { gameName: name })
-    	}
+    	},
+        getGames: function (id) {
+            return $http.get('/users/' + id)
+        }
     }
 }
