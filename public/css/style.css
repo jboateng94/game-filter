@@ -12,7 +12,7 @@ body{
 }
 
 .ratings h4{
-	display: inline;
+	display: inline-block;
 	padding: 20px;
 }
 
@@ -28,6 +28,15 @@ body{
 
 .app-logo h4{
 	font-family: 'Londrina Outline', cursive;
+}
+
+#sbar{
+	color: white;
+}
+
+.cover{
+	max-width: 60%;
+    height: auto;
 }
 
 @media screen and (max-width: 1031px) {
