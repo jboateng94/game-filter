@@ -30,3 +30,9 @@ body{
 	font-family: 'Londrina Outline', cursive;
 }
 
+@media screen and (max-width: 1031px) {
+  .brand-logo {
+    visibility: hidden;
+  }
+}
+

@@ -47,7 +47,6 @@ function gameController(Game, $state, $stateParams, User, Auth) {
 		User.like(user.uid, self.game.name)
 			.then(function (res) {
 				
-				// console.log(res)
 			}).catch(function (err) {
 				// if (err) console.log(err)
 			})
@@ -70,8 +69,7 @@ function gameController(Game, $state, $stateParams, User, Auth) {
 						self.games.push(JSON.parse(response.data).results[0]);
 					  })
 				}
-				console.log(self.games);
-				//$state.go('users');
+				$state.go('users');
 			}).catch(function (err) {
 				console.log(err)
 			})

@@ -40,14 +40,14 @@
 		  <div class="nav-wrapper blue" ng-if="auth.user">
 		  	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		  	<div class="app-logo">
-		  		<i class="left fa fa-gamepad fa-3x" aria-hidden="true"></i>
+		  		<i class="logo left fa fa-gamepad fa-3x" aria-hidden="true"></i>
 		  		<h4 class="left">GameFilter</h4>
 		  	</div>
-		    <h3 class="brand-logo center">Welcome {{auth.user.email}}!</h3>
+		    <a class="brand-logo center hide-on-med-and-large">Welcome {{auth.user.email}}!</a>
 		    <ul id="nav-mobile" class="right hide-on-med-and-down">
-		      <li><a href="#" ui-sref='home'><i class="fa fa-home fa-2x" aria-hidden="true"> Home</i></a></li>
-		      <li><a href="#" ui-sref="users"><i class="fa fa-user fa-2x" aria-hidden="true"> Profile</i></a></li>
-		      <li><a href="#" ng-click="auth.signOut()"><i class="fa fa-sign-out fa-2x" aria-hidden="true"> Log out</i></a></li>
+		      <li><a href="#" ui-sref='home'><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
+		      <li><a href="#" ui-sref="users"><i class="fa fa-user" aria-hidden="true"> </i>Profile</a></li>
+		      <li><a href="#" ng-click="auth.signOut()"><i class="fa fa-sign-out" aria-hidden="true"> </i>Log out</a></li>
 		    </ul>
 		    <ul class="side-nav" id="mobile-demo">
 	          <li><a href="#" ng-click="auth.signOut()">Log out</a></li>
@@ -61,7 +61,7 @@
 		  		<i class="left fa fa-gamepad fa-3x" aria-hidden="true"></i>
 		  		<h4 class="left">GameFilter</h4>
 		  	</div>
-		    <h3 class="brand-logo center">Welcome new user!</h3>
+		    <a class="brand-logo center">Welcome new user!</a>
 		    <ul id="nav-mobile" class="right hide-on-med-and-down">
 		      <li><a href="#" ui-sref='login'>Log in</a></li>
 		      <li><a href="#" ui-sref='signup'>Signup</a></li>
