@@ -24,3 +24,7 @@ Add additional notes about how to deploy this on a live system
 * [NodeJS](https://nodejs.org/en/) - Used to create the back end
 * [jQuery](jQuery) - Used to make side nav
 
+
+## Authors
+
+* **Jeremy Boateng** - *Initial work* - [jboateng94](https://github.com/jboateng94)
