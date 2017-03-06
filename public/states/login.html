@@ -3,9 +3,9 @@
 	<p>But you're logged in...</p>
 </section>
 
-<section ng-if="!auth.user" class="container">
+<section ng-if="!auth.user" class="container login">
 	<div class="row">
-		<div class="col m8 offset-m2">
+		<div class="col m8 offset-m1">
 			<div class="field">
 				<label for="email">Email: </label>
 				<input type="email" name="email" ng-model="auth.email">
@@ -16,7 +16,7 @@
 				<input type="password" name="password" ng-model="auth.password">
 			</div>
 
-			<a class="waves-effect waves-light btn" ng-click="auth.logIn()">Log in!</a>
+			<a class="waves-effect waves-light btn blue" ng-click="auth.logIn()">Log in!</a>
 
 			<p ng-if="auth.error">
 				Error: <strong>{{ auth.error }}</strong>

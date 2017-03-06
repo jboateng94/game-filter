@@ -40,6 +40,10 @@ body{
     height: auto;
 }
 
+section .login{
+	text-align: center;
+}
+
 @media screen and (max-width: 1031px) {
   .brand-logo {
     visibility: hidden;
