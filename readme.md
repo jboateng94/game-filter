@@ -23,3 +23,4 @@ Add additional notes about how to deploy this on a live system
 * [Angular](https://angularjs.org/) - The front end framework used
 * [NodeJS](https://nodejs.org/en/) - Used to create the back end
 * [jQuery](jQuery) - Used to make side nav
+
