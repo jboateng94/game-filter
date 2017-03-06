@@ -8,7 +8,7 @@ function authController(Auth, User, $state) {
 	var self = this;
 
 	self.createUser = function() {
-		console.log('create user');
+		
 		Auth.$createUserWithEmailAndPassword(self.email, self.password)
 			.then(function (user) {
 
@@ -43,7 +43,7 @@ function authController(Auth, User, $state) {
 	}
 
 	Auth.$onAuthStateChanged(function (user) {
-		console.log(user);
+		
 		self.user = user;
 	});
 

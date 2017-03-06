@@ -39,16 +39,7 @@ function showGame (req, res) {
 		function (error, response, body) {
 		  if (!error && response.statusCode == 200) { 
 			res.json(body)
-			// console.log('RESULTS: '+ body);
-
-			// market.getItemsPrice(730, name, function(data) {
-			//     console.log(data);
-			//     if (data[name].success) {
-			//     	res.json(data.searchTerm)
-			//     } else {
-			//     	res.status(500).send()
-			//     }
-			// });
+			
 			var params = {
 			  'OPERATION-NAME': 'findItemsByKeywords', 'keywords': name
 			}

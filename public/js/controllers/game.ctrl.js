@@ -22,20 +22,20 @@ function gameController(Game, $state, $stateParams, User, Auth) {
 			for(var i = 0; i < self.data.length; i+=3) {
 				self.chunkedData.push([self.data[i], self.data[i+1], self.data[i+2]]);
 			}
-			console.log(self.chunkedData);
+			
 			  
 			 
 		  }, function errorCallback(response) {
 		    // called asynchronously if an error occurs
 		    // or server returns response with an error status.
-		    console.log('maybe not...', response);
+		    
 		  });
 	}
 
 	self.show = function () {
 		// put self.searchTerm in body of request
 
-		// console.log($stateParams.name);
+		
 		Game.show($stateParams.name)
 		  .then(function(response) {
 		  	
@@ -47,13 +47,12 @@ function gameController(Game, $state, $stateParams, User, Auth) {
 	}
 
 	self.favourite = function() {
-		// console.log(self.game);
 		var user = Auth.$getAuth()
 		User.like(user.uid, self.game.name)
 			.then(function (res) {
 				
 			}).catch(function (err) {
-				// if (err) console.log(err)
+				
 			})
 	}
 
@@ -63,7 +62,6 @@ function gameController(Game, $state, $stateParams, User, Auth) {
 		User.getGames(user.uid)
 			.then(function (res) {
 				
-				// console.log(res)
 				for (var i = 0; i < res.data.length; i++) {
 					
 					Game.show(res.data[i])
@@ -76,7 +74,7 @@ function gameController(Game, $state, $stateParams, User, Auth) {
 				}
 				$state.go('users');
 			}).catch(function (err) {
-				console.log(err)
+				
 			})
 	}
 }
