@@ -23,14 +23,16 @@
 
 	<section class="container">
 
-		<div class="row">
-          <div class="col s12 m4" ng-repeat="game in gameCtrl.data track by $index">
-            <div class="card" >
-              <div class="card-image" >
-                <img src="{{ game.image.medium_url }}" alt="Cover art for {{game.name}}">
-              </div>
-              <div class="card-action">
-                <a href="#" ui-sref = "game({name: game.name})" >{{ game.name }}</a>
+		<div class="row" >
+          <div class="col s12 m4" ng-repeat="games in gameCtrl.chunkedData track by $index">
+            <div class="card" ng-repeat="game in games track by $index">
+              <div class="gameCard">
+              	<div class="card-image">
+	                <img src="{{ game.image.medium_url }}" alt="Cover art for {{game.name}}">
+	              </div>
+	              <div class="card-action">
+	                <a href="#" ui-sref = "game({name: game.name})" >{{ game.name }}</a>
+	              </div>
               </div>
             </div>
           </div>

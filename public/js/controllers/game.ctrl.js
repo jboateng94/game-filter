@@ -17,7 +17,12 @@ function gameController(Game, $state, $stateParams, User, Auth) {
 			// this callback will be called asynchronously
 		    // when the response is available
 			
-			self.data = JSON.parse(response.data).results
+			self.data = JSON.parse(response.data).results;
+			self.chunkedData = [];
+			for(var i = 0; i < self.data.length; i+=3) {
+				self.chunkedData.push([self.data[i], self.data[i+1], self.data[i+2]]);
+			}
+			console.log(self.chunkedData);
 			  
 			 
 		  }, function errorCallback(response) {
