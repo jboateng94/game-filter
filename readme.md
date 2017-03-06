@@ -28,3 +28,11 @@ Add additional notes about how to deploy this on a live system
 ## Authors
 
 * **Jeremy Boateng** - *Initial work* - [jboateng94](https://github.com/jboateng94)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Giant Bomb for letting me use their API
