@@ -28,15 +28,17 @@
             <div class="card" ng-repeat="game in games track by $index">
               <div class="gameCard">
               	<div class="card-image">
-	                <img src="{{ game.image.medium_url }}" alt="Cover art for {{game.name}}">
-	              </div>
-	              <div class="card-action">
-	                <a href="#" ui-sref = "game({name: game.name})" >{{ game.name }}</a>
-	              </div>
+	              <img src="{{ game.image.medium_url }}" alt="Cover art for {{game.name}}">
+	            </div>
+	            <div class="card-action">
+	              <a href="#" ui-sref = "game({name: game.name})" >{{ game.name }}</a>
+	            </div>
               </div>
+              <br>
             </div>
           </div>
         </div>
 
 	</section>
+	<h5>It may take a little while for the results to load...</h5>
 </section>

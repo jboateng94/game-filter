@@ -5,6 +5,7 @@ body{
 .field{
 	margin: 0;
 	padding: 10px;
+  display: inline;
 }
 
 .card{
@@ -14,6 +15,11 @@ body{
 .ratings h4{
 	display: inline-block;
 	padding: 20px;
+}
+
+.gameCard{
+  border: 1px solid black;
+  /*padding-bottom: 20px;*/
 }
 
 .app-logo i{
@@ -42,6 +48,16 @@ body{
 
 section .login{
 	text-align: center;
+}
+
+.gamePage h4{
+  display: inline;
+  padding: 5px;
+}
+
+.gamePage img{
+  width: 300px;
+  height: auto;
 }
 
 @media screen and (max-width: 1031px) {

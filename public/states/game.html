@@ -1,11 +1,12 @@
-<section ng-controller="gameController as game">
-	<div ng-init = "game.show()"></div>
-	<h1>{{game.game.name}}</h1>
+<section class="gamePage" ng-controller="gameController as gameCtrl">
+	<div ng-init = "gameCtrl.show()"></div>
+	<h2>{{gameCtrl.game.name}}</h2>
+	<h4 ng-repeat="platform in gameCtrl.game.platforms"> {{platform.name}} </h4>
 	<section class='ratings'>
-		<h4 ng-repeat="rating in game.game.original_game_rating">{{rating.name}}</h4>
+		<h4 ng-repeat="rating in gameCtrl.game.original_game_rating">{{rating.name}}</h4>
 	</section>
-	<img class="cover" src="{{game.game.image.small_url}}" alt="Cover art for {{game.game.name}}">
-	<h5> Original Release date: {{game.game.original_release_date}}</h5>
-	<button ng-click="game.favourite()" >LIKE</button>
+	<img class="cover" src="{{gameCtrl.game.image.small_url}}" alt="Cover art for {{gameCtrl.game.name}}">
+	<h5> Original Release date: {{gameCtrl.game.original_release_date}}</h5>
+	<a href='#' ng-click="gameCtrl.favourite()" ><img src="http://vectorlogo4u.com/wp-content/uploads/2016/09/facebook-like-icon.png" alt="LIKE"></a>
 	
 </section>

@@ -4,12 +4,17 @@
 		<div class="col m8 offset-m1">
 			<div class="field">
 				<label for="email">Email: </label>
-				<input type="email" name="email" ng-model="auth.email">
+				<input type="email" name="email">
 			</div>
 
 			<div class="field">
 				<label for="password">Password: </label>
-				<input type="password" name="password" ng-model="auth.password">
+				<input type="password" name="password">
+			</div>
+
+			<div class="field">
+				<label for="psn">Password: </label>
+				<input type="text" name="psn">
 			</div>
 
 			<button class="btn waves-effect waves-light blue" ng-click="auth.createUser()">Sign up</button>
