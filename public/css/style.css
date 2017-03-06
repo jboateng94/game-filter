@@ -18,6 +18,7 @@ body{
 
 .app-logo i{
 	padding-left: 20px;
+	/*padding-top: 15px;*/
 	-webkit-transform:rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -42,6 +43,22 @@ body{
 @media screen and (max-width: 1031px) {
   .brand-logo {
     visibility: hidden;
+  }
+  .app-logo{
+  	padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .brand-logo {
+    visibility: hidden;
+  }
+  .app-logo{
+  	padding-top: 5px;
+  }
+
+  .app-logo i{
+  	display: none;
   }
 }
 

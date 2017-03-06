@@ -12,6 +12,7 @@
   	<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
 	<script src="/js/app.js"></script>
+
   	<script src="js/factories/auth.fact.js"></script>
   	<script src="js/factories/user.fact.js"></script>
   	<script src="js/factories/game.fact.js"></script>
@@ -28,6 +29,8 @@
   	<!-- Compiled and minified JavaScript -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
+  	<script src="/js/sidenav.js"></script>
+
   	<link href="https://fonts.googleapis.com/css?family=Londrina+Outline|Nunito" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -36,40 +39,48 @@
 <body ng-controller='authController as auth'>
 
 	<div class="navbar-fixed">	
-		<nav>
-		  <div class="nav-wrapper blue" ng-if="auth.user">
-		  	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
-		  	<div class="app-logo">
+		<nav class="nav-extend">
+		  <div class="nav-wrapper blue">
+		    <ul id="slide-out" class="side-nav">
+		      <li><div class="userView">
+		        <div class="background">
+		      	  <!-- <img src="https://thngs-images.s3.amazonaws.com/04/22/2015/522dde3a-0d38-47fe-804b-5572b846e492.png"> -->
+		      	</div>
+		      	<!-- <a href="#!user"><img class="circle" src="images/yuna.jpg"></a> -->
+			    <!-- <a href="#!name"><span class="white-text name">John Doe</span></a> -->
+			    <!-- <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+			  </div></li>
+
+			  <li ng-if="!auth.user"><a href="#" ui-sref='login'> Log in</a></li>
+		      <li ng-if="!auth.user"><a href="#" ui-sref='signup'> Signup</a></li>
+
+			  <li ng-if="auth.user"><a href="#" ui-sref='home'><i class="fa fa-home" aria-hidden="true"> </i> Home</a></li>
+			  <li ng-if="auth.user"><a href="#" ui-sref="users"><i class="fa fa-user" aria-hidden="true"> </i> Profile</a></li>
+			  <li><a href="#" ng-click="auth.signOut()"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></li>
+
+			  <li><div class="divider"></div></li>
+			  <li><a class="subheader">Subheader</a></li>
+			  <li><a class="waves-effect" href="www.giantbomb.com">API courtesy of Giant Bomb</a></li>
+			  
+		    </ul>
+		    <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+		    <div class="app-logo">
 		  		<i class="logo left fa fa-gamepad fa-3x" aria-hidden="true"></i>
 		  		<h4 class="left">GameFilter</h4>
 		  	</div>
-		    <a class="brand-logo center hide-on-med-and-large">Welcome {{auth.user.email}}!</a>
-		    <ul id="nav-mobile" class="right hide-on-small-and-down">
-		      <li><a href="#" ui-sref='home'><i class="fa fa-home" aria-hidden="true"> </i>Home</a></li>
-		      <li><a href="#" ui-sref="users"><i class="fa fa-user" aria-hidden="true"> </i>Profile</a></li>
-		      <li><a href="#" ng-click="auth.signOut()"><i class="fa fa-sign-out" aria-hidden="true"> </i>Log out</a></li>
+		    
+		    <ul id="nav-mobile" class="right hide-on-small-and-down" ng-if="auth.user">
+		      <li><a href="#" ui-sref='home'><i class="fa fa-home" aria-hidden="true"> </i> Home</a></li>
+		      <li><a href="#" ui-sref="users"><i class="fa fa-user" aria-hidden="true"> </i> Profile</a></li>
+		      <li><a href="#" ng-click="auth.signOut()"><i class="fa fa-sign-out" aria-hidden="true"> </i> Log out</a></li>
 		    </ul>
-		    <ul class="side-nav" id="mobile-demo">
-	          <li><a href="#" ng-click="auth.signOut()">Log out</a></li>
-		      <li><a href="#" ui-sref='home'>Home</a></li>
-		      <li><a href="#" ui-sref='users'>Profile</a></li>
-	        </ul>
-		  </div>
-		  <div class="nav-wrapper blue" ng-if="!auth.user">
-		  	<a href="#" data-activates="dropdown1" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
-		  	<div class="app-logo">
-		  		<i class="left fa fa-gamepad fa-3x" aria-hidden="true"></i>
-		  		<h4 class="left">GameFilter</h4>
-		  	</div>
-		    <a class="brand-logo center">Welcome new user!</a>
-		    <ul id="nav-mobile" class="right hide-on-med-and-down">
-		      <li><a href="#" ui-sref='login'>Log in</a></li>
-		      <li><a href="#" ui-sref='signup'>Signup</a></li>
+
+		    <ul id="nav-mobile" class="right hide-on-med-and-down" ng-if="!auth.user">
+		      <li><a href="#" ui-sref='login'> Log in</a></li>
+		      <li><a href="#" ui-sref='signup'> Signup</a></li>
 		    </ul>
-		    <ul id="dropdown1" class="dropdown-content">
-			  <li><a href="#" ui-sref='login'>Log in</a></li>
-			  <li><a href="#" ui-sref='signup'>Signup</a></li>
-			</ul>
+			<!-- <a class="brand-logo center hide-on-med-and-large" >Welcome {{auth.user.email}}!</a> -->
 		  </div>
 		</nav>
 	</div>

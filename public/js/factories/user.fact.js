@@ -12,7 +12,7 @@ function userFactory($http) {
     		return $http.patch('/users/like/' + id, { gameName: name })
     	},
         getGames: function (id) {
-            return $http.get('/users/' + id)
+            return $http.get('/users/' + id, {id: id})
         }
     }
 }
