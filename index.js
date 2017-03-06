@@ -5,8 +5,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var ejs = require('ejs');
 
+var mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost/game'
+
 // connect to the database
-mongoose.connect('mongodb://localhost/game', function(err, db) {
+mongoose.connect(mongoUrl, function(err, db) {
 	console.log(db);
   	if(!err) {
     	console.log("We are connected");
@@ -27,6 +29,6 @@ app.set('view engine' , 'ejs');
 // add the router last
 app.use(routes);
 
-app.listen(3000 , function(){
+app.listen(process.env.PORT || 3000 , function(){
   console.log('Server is running. listening on port 3000');
 });
