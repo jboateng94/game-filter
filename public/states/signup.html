@@ -13,8 +13,18 @@
 			</div>
 
 			<div class="field">
-				<label for="psn">Password: </label>
-				<input type="text" name="psn">
+				<label for="psn">Playstation Network username: </label>
+				<input type="text" name="psn" ng-model="auth.psn">
+			</div>
+
+			<div class="field">
+				<label for="xbl">Xbox Live Username: </label>
+				<input type="text" name="xbl" ng-model="auth.xbl">
+			</div>
+
+			<div class="field">
+				<label for="steam">Steam ID: </label>
+				<input type="text" name="steam" ng-model="auth.steam">
 			</div>
 
 			<button class="btn waves-effect waves-light blue" ng-click="auth.createUser()">Sign up</button>

@@ -7,13 +7,20 @@ angular
 function authController(Auth, User, $state) {
 	var self = this;
 
+	self.psn = '';
+	self.xbl = '';
+	self.psn = '';
+
 	self.createUser = function() {
 		console.log('create user');
 		Auth.$createUserWithEmailAndPassword(self.email, self.password)
 			.then(function (user) {
 
 				User.create({
-					uid: user.uid
+					uid: user.uid,
+					psn: self.psn,
+					xbl: self.xbl,
+					steam: self.steam
 				}).then(function(user) {
 					resetCredentials();
 				}).catch(function (err) {
